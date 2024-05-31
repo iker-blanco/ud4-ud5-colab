@@ -20,15 +20,15 @@ def mostrar_resultados(resultados):
 
     # Encontramos el modelo con el mejor valor de f1 score
     mejor_distancia, mejor_k = max(resultados.items(), key=lambda x: x[1][3])
-    print(f"La mejor distancia/k es {mejor_distancia} para maximizar el f1 score, con un f1 score de {resu}")
+    print(f"La mejor distancia/k es {mejor_distancia} para maximizar el f1 score, con un f1 score de {mejor_k[3]}")
 
     # Encontramos el modelo con el mejor valor de accuracy
     mejor_distancia, mejor_k = max(resultados.items(), key=lambda x: x[1][0])
-    print(f"La mejor distancia/k es {mejor_distancia} para maximizar la accuracy")
+    print(f"La mejor distancia/k es {mejor_distancia} para maximizar la accuracy, con una accuracy de {mejor_k[0]}")
 
     # Encontramos el modelo con el mejor valor de precision
     mejor_distancia, mejor_k = max(resultados.items(), key=lambda x: x[1][1])
-    print(f"La mejor distancia/k es {mejor_distancia} para maximizar la precision")
+    print(f"La mejor distancia/k es {mejor_distancia} para maximizar la precision, con una precision de {mejor_k[1]}")
 
 
 def mostrar_tabla(resultados):
